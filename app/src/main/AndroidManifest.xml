@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ricardoprieto.silenciador" >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.ricardoprieto.silenciador.Principal"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.example.ricardoprieto.silenciador.MuteByWiFiService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="Mute por Wifi" >
+            <intent-filter>
+                <action android:name="om.example.ricardoprieto.silenciador.MuteByWiFiServic" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.example.ricardoprieto.silenciador.Activities.ListaWifiActivitie"
+            android:label="@string/title_activity_lista_wifi_activitie" >
+        </activity>
+        <activity
+            android:name="com.example.ricardoprieto.silenciador.EditarReglaActivitie"
+            android:label="@string/title_activity_editar_regla_activitie" >
+        </activity>
+        <activity
+            android:name="com.example.ricardoprieto.silenciador.ListarReglasActivitie"
+            android:label="@string/title_activity_listar_reglas_activitie" >
+        </activity>
+
+        <receiver
+            android:name="com.example.ricardoprieto.silenciador.MuteByWifiBootReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.ricardoprieto.silenciador.ConfiguracionSettingsActivity"
+            android:label="@string/title_activity_configuracion_settings" >
+        </activity>
+    </application>
+
+</manifest>

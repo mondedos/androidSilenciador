@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Principal" >
+    <item android:id="@+id/menu_recargar"
+        android:title="Recargar Wifis"
+        />
+    <item android:id="@+id/menu_ver_reglas"
+        android:title="Listado de Reglas"
+        />
+    <item android:id="@+id/menu_servicio_iniciar"
+        android:title="Iniciar Servicio"
+        />
+    <item android:id="@+id/menu_servicio_parar"
+        android:title="Detener Servicio"
+        />
+    <item android:id="@+id/menu_configuracion"
+        android:title="@string/menu_general_configuracion"
+        />
+
+    <item android:id="@+id/menu_salir"
+        android:title="@string/manu_general_salir"
+        />
+</menu>
